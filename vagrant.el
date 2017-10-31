@@ -48,6 +48,18 @@
   (vagrant-command "vagrant provision"))
 
 ;;;###autoload
+(defun vagrant-port ()
+  "Shows forwarded ports in the vagrant box."
+  (interactive)
+  (vagrant-command "vagrant port"))
+
+;;;###autoload
+(defun vagrant-global-status ()
+  "Shows statuses of Vagrant environments for this user"
+  (interactive)
+  (vagrant-command "vagrant global-status"))
+
+;;;###autoload
 (defun vagrant-destroy ()
   "Destroy the vagrant box."
   (interactive)
